@@ -1,4 +1,4 @@
-PROMPT='%F{green}[MBP:%1~]%F{reset}%# '
+PROMPT='%F{green}[%m:%1~]%F{reset}%# '
 # path only prompt
 # PROMPT='%F{green}[%1~]%F{reset}%# '
 
@@ -21,4 +21,4 @@ export GOPROXY=https://goproxy.cn
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/15/bin
 
 # dotfiles
-alias dotfiles=/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
