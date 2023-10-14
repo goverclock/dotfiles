@@ -14,11 +14,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
-		"folke/tokyonight.nvim",
+		"NLKNguyen/papercolor-theme",
 		lazy = false,
 		priority = 1000,
-		opts = {},
 	},
+--	{
+--		"folke/tokyonight.nvim",
+--		lazy = false,
+--		priority = 1000,
+--		opts = {},
+--	},
 	{
 		"wakatime/vim-wakatime",
 		lazy = false,
