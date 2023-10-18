@@ -1,24 +1,38 @@
 PROMPT='%F{green}[%m:%1~]%F{reset}%# '
-# path only prompt
-# PROMPT='%F{green}[%1~]%F{reset}%# '
 
 # alias
-alias new="open -a iTerm ."
 alias vim="nvim"
 # alias ls="ls -a --color"
 alias codee="code .; exit"
-
-# zsh-autosuggestions
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
 
 # GO
 export GOPATH=$HOME/go
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPROXY=https://goproxy.cn
 
-# postgresql
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/15/bin
-
 # dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	export PATH=$PATH:/sbin:/usr/sbin
+	export PATH=$PATH:~/.local/bin
+	. "$HOME/.cargo/env"
+	# manually installed golang
+	export PATH=$PATH:/usr/local/go/bin
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	#alias new="open -a iTerm ."
+	alias opene="open .; exit"
+
+	# zsh-autosuggestions
+	source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+	ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
+
+	# postgresql
+	export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/15/bin
+
+	# xv6
+	PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin
+else
+	echo ".zshrc: unknown os"
+fi
