@@ -5,11 +5,6 @@ alias vim="nvim"
 # alias ls="ls -a --color"
 alias codee="code .; exit"
 
-# GO
-export GOPATH=$HOME/go
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPROXY=https://goproxy.cn
-
 # dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -36,3 +31,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 else
 	echo ".zshrc: unknown os"
 fi
+
+# GO
+export GOPATH=$HOME/go
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPROXY=https://goproxy.cn
+
