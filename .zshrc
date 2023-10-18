@@ -1,4 +1,4 @@
-PROMPT='%F{green}[%m:%1~]%F{reset}%# '
+PROMPT='%F{green}[%n@%m:%1~]%F{reset}%# '
 
 # alias
 alias vim="nvim"
