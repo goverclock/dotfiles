@@ -13,3 +13,4 @@ set.termguicolors = true
 set.list = true
 set.lcs = "tab:  "
 set.confirm = true
+set.cursorline = true
