@@ -39,3 +39,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPROXY=https://goproxy.cn
 
+# handy scripts
+export PATH=$PATH:$HOME/pyscripts
+
