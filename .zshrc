@@ -6,7 +6,7 @@ alias vim="nvim"
 alias codee="code .; exit"
 
 # dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # force zsh in emacs mode, see https://unix.stackexchange.com/questions/197839/why-does-exporting-vim-as-editor-in-zsh-disable-keyboard-shortcuts
 set -o emacs
@@ -21,10 +21,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	#alias new="open -a iTerm ."
 	alias opene="open .; exit"
 
-	# zsh-autosuggestions
-	source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-	ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6"
-
 	# postgresql
 	export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/15/bin
 
@@ -33,6 +29,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 else
 	echo ".zshrc: unknown os"
 fi
+
+# zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=14"
 
 # GO
 export GOPATH=$HOME/go
