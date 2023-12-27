@@ -29,7 +29,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/15/bin
 
 	# xv6
-	PATH=$PATH:/usr/local/opt/riscv-gnu-toolchain/bin
+	export PATH=$PATH:/opt/homebrew/Cellar/riscv64-elf-gdb/
 else
 	echo ".zshrc: unknown os"
 fi
