@@ -5,6 +5,10 @@ alias vim="nvim"
 # alias ls="ls -a --color"
 alias codee="code .; exit"
 
+# proxy
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=$http_proxy
+
 # dotfiles
 alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
