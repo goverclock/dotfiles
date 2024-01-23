@@ -15,6 +15,11 @@ alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # force zsh in emacs mode, see https://unix.stackexchange.com/questions/197839/why-does-exporting-vim-as-editor-in-zsh-disable-keyboard-shortcuts
 set -o emacs
 
+# history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	export PATH=$PATH:/sbin:/usr/sbin
 	export PATH=$PATH:~/.local/bin
