@@ -1,5 +1,6 @@
 PROMPT='%F{green}[%n@%m:%1~]%F{reset}%# '
 EDITOR=nvim
+LANGUAGE="en_US.UTF-8"
 
 # alias
 alias vim="nvim"
