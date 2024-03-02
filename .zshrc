@@ -6,13 +6,11 @@ LANGUAGE="en_US.UTF-8"
 alias vim="nvim"
 # alias ls="ls -a --color"
 alias codee="code .; exit"
+alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # proxy
 export http_proxy=http://127.0.0.1:7890
 export https_proxy=$http_proxy
-
-# dotfiles
-alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # force zsh in emacs mode, see https://unix.stackexchange.com/questions/197839/why-does-exporting-vim-as-editor-in-zsh-disable-keyboard-shortcuts
 set -o emacs
@@ -26,8 +24,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	export PATH=$PATH:/sbin:/usr/sbin
 	export PATH=$PATH:~/.local/bin
 	. "$HOME/.cargo/env"
-	# manually installed golang
-	export PATH=$PATH:/usr/local/go/bin
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	#alias new="open -a iTerm ."
 	alias opene="open .; exit"
