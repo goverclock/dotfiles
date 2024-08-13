@@ -4,7 +4,7 @@ LANGUAGE="en_US.UTF-8"
 
 # alias
 alias vim="nvim"
-# alias ls="ls -a --color"
+alias ls="ls -F --color"
 alias codee="code .; exit"
 alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
