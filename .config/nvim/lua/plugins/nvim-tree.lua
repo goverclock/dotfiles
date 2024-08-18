@@ -20,12 +20,22 @@ local function my_on_attach(bufnr)
 	vkm.set('n', 'h', api.node.navigate.parent, opts('Parent Directory'))
 	vkm.set('n', 'l', function()
 		local node = api.tree.get_node_under_cursor()
+		--local t = api.tree.get_nodes()
+		--print(vim.notify(vim.inspect(node)))
+		if node.name == ".." then	-- prevent entering parent directory accidently
+			return
+		end
 		api.node.open.edit()
 		if node.type ~= "directory" then
 			vim.cmd('wincmd p')		-- back to nvim-tree focus, rather than the opened file
 		end
 	end, opts('Open and Stay in Tree'))
+
 	vkm.del('n', '<C-e>', { buffer = bufnr })	-- prevent nvim-tree from opening in place, so that to move view up and down
+
+	-- use single click rather then double click to open file
+	vkm.del('n', '<2-LeftMouse>', { buffer = bufnr })
+	vkm.set('n', '<LeftRelease>', api.node.open.edit, opts('Open'))
 end
 
 require("nvim-tree").setup {

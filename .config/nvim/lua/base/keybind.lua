@@ -14,8 +14,11 @@ vkm.set("n", "<Leader>v", "<C-w>v", opt)
 vkm.set("n", "<Leader>s", "<C-w>s", opt)
 vkm.set("n", "<Leader>sv", ":source ~/.config/nvim/init.lua<CR>", opt)
 
--- vkm.set("n", "j", [[v:count ? 'j' : 'gj']], { noremap = true, expr = true })
--- vkm.set("n", "k", [[v:count ? 'k' : 'gk']], { noremap = true, expr = true })
+-- buffer manager
+vkm.set('n', 'J', ':BufferNext<CR>', opt)
+vkm.set('n', 'K', ':BufferPrevious<CR>', opt)
+vkm.set('n', 'Q', ':bp<bar>sp<bar>bn<bar>bd<CR>', opt)	-- see https://stackoverflow.com/questions/1444322/how-can-i-close-a-buffer-without-closing-the-window
+
 
 vkm.set("i", "<C-h>", "<Left>", opt)
 vkm.set("i", "<C-j>", "<Down>", opt)

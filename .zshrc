@@ -21,9 +21,10 @@ function zle-line-init zle-keymap-select {
     RPS2=$RPS1
     zle reset-prompt
 }
-
 zle -N zle-line-init
 zle -N zle-keymap-select
+# escape time for zsh vim mode, see https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+KEYTIMEOUT=1
 
 # history
 HISTFILE=~/.zsh_history
