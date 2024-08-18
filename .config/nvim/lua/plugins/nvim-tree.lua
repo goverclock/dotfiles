@@ -16,8 +16,16 @@ local function my_on_attach(bufnr)
 	-- vim.keymap.set('n', '<C-t>', api.tree.change_root_to_parent,        opts('Up'))
 	-- vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
 	-- vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
-	vim.keymap.set('n', 'h', api.node.navigate.parent, opts('Parent Directory'))
-	vim.keymap.set('n', 'l', api.node.open.preview, opts('Open Preview'))
+	local vkm = vim.keymap
+	vkm.set('n', 'h', api.node.navigate.parent, opts('Parent Directory'))
+	vkm.set('n', 'l', function()
+		local node = api.tree.get_node_under_cursor()
+		api.node.open.edit()
+		if node.type ~= "directory" then
+			vim.cmd('wincmd p')		-- back to nvim-tree focus, rather than the opened file
+		end
+	end, opts('Open and Stay in Tree'))
+	vkm.del('n', '<C-e>', { buffer = bufnr })	-- prevent nvim-tree from opening in place, so that to move view up and down
 end
 
 require("nvim-tree").setup {
@@ -35,3 +43,4 @@ require("nvim-tree").setup {
 -- 		end
 -- 	end
 -- })
+

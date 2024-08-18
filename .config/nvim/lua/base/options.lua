@@ -1,5 +1,6 @@
 -- vim options
 local set = vim.o
+set.colorcolumn = "80"
 set.number = true
 set.relativenumber = true
 set.clipboard = "unnamed"
