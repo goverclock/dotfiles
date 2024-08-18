@@ -2,6 +2,8 @@ PROMPT='%F{green}[%n@%m:%1~]%F{reset}%# '
 EDITOR=nvim
 LANGUAGE="en_US.UTF-8"
 
+# 
+
 # alias
 alias vim="nvim"
 alias ls="ls -F --color"
@@ -12,8 +14,16 @@ alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export http_proxy=http://127.0.0.1:7890
 export https_proxy=$http_proxy
 
-# force zsh in emacs mode, see https://unix.stackexchange.com/questions/197839/why-does-exporting-vim-as-editor-in-zsh-disable-keyboard-shortcuts
-set -o emacs
+# vim mode for zsh
+set -o vi
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
 
 # history
 HISTFILE=~/.zsh_history
