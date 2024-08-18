@@ -1,5 +1,5 @@
-require("core.options")
-require("core.keybind")
+require("base.options")	-- vim.o options
+require("base.keybind")
 
 require("plugins.keybind")
 require("plugins.lazy")

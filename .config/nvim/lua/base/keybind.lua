@@ -25,3 +25,4 @@ vkm.set("i", "<C-l>", "<Right>", opt)
 -- terminal
 vkm.set("t", "<Esc>", "<C-\\><C-n>", opt)
 vkm.set("n", "<C-t>", ":tab term<CR>", opt)
+
