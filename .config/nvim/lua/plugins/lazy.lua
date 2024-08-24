@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
-		"NLKNguyen/papercolor-theme",
+		"goverclock/papercolor-theme",
 		lazy = false,
 		priority = 1000,
 	},
