@@ -18,12 +18,12 @@ require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 	},
---	{
---		"folke/tokyonight.nvim",
---		lazy = false,
---		priority = 1000,
---		opts = {},
---	},
+	{
+		"Mofiqul/vscode.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
 	{
 		"wakatime/vim-wakatime",
 		lazy = false,

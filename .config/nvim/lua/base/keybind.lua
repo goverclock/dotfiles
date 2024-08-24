@@ -19,7 +19,6 @@ vkm.set('n', 'J', ':BufferNext<CR>', opt)
 vkm.set('n', 'K', ':BufferPrevious<CR>', opt)
 vkm.set('n', 'Q', ':bp<bar>sp<bar>bn<bar>bd<CR>', opt)	-- see https://stackoverflow.com/questions/1444322/how-can-i-close-a-buffer-without-closing-the-window
 
-
 vkm.set("i", "<C-h>", "<Left>", opt)
 vkm.set("i", "<C-j>", "<Down>", opt)
 vkm.set("i", "<C-k>", "<Up>", opt)
