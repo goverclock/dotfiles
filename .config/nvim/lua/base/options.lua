@@ -16,6 +16,6 @@ set.tabstop = 4
 set.scl = "yes"
 set.termguicolors = true
 set.list = true
-set.lcs = "tab:> ,lead:.,trail:."
+set.lcs = "tab:→ ,lead:·,trail:·"
 set.cursorline = true
 
