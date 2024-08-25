@@ -43,6 +43,16 @@ require("nvim-tree").setup {
 	view = {
 		width = 30,
 	},
+	filters = {
+		enable = true,
+		git_ignored = false,
+		git_clean = false,
+		custom = {
+			".git",
+			".vscode",
+			"__pycache__",
+		},
+	},
 }
 
 -- vim.api.nvim_create_autocmd("BufEnter", {

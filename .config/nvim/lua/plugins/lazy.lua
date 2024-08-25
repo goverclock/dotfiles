@@ -15,12 +15,12 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{
 		"goverclock/papercolor-theme",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 	},
 	{
 		"Mofiqul/vscode.nvim",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		opts = {},
 	},
@@ -32,12 +32,15 @@ require("lazy").setup({
 		'nvim-telescope/telescope.nvim',
 		cmd = "Telescope",
 		keys = {
-			{ "<C-p>", ":Telescope find_files<CR>", desc = "Telescope find files" },
-			{ "<C-f>", ":Telescope live_grep<CR>",  desc = "Telescope live grep" },
+			{ "<C-p>", ":Telescope find_files<CR>" },
+			{ "<C-f>", ":Telescope live_grep<CR>" },
 		},
+		config = function()
+			require("plugins/telescope")
+		end,
 		tag = '0.1.2',
 		-- or                              , branch = '0.1.x',
-		dependencies = { 'nvim-lua/plenary.nvim' }
+		dependencies = { 'nvim-lua/plenary.nvim' },
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
@@ -46,6 +49,9 @@ require("lazy").setup({
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
+		keys = {
+			{ "<Leader>e", ":NvimTreeToggle<CR>", mode = "n" }
+		}
 	},
 	{
 		'romgrk/barbar.nvim',
