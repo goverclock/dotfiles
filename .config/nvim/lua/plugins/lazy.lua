@@ -19,12 +19,6 @@ require("lazy").setup({
 		priority = 1000,
 	},
 	{
-		"Mofiqul/vscode.nvim",
-		lazy = true,
-		priority = 1000,
-		opts = {},
-	},
-	{
 		"wakatime/vim-wakatime",
 		lazy = false,
 	},
@@ -68,3 +62,4 @@ require("lazy").setup({
 		version = '^1.0.0', -- optional: only update when a new 1.x version is released
 	},
 })
+
