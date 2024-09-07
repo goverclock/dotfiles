@@ -61,5 +61,10 @@ require("lazy").setup({
 		},
 		version = '^1.0.0', -- optional: only update when a new 1.x version is released
 	},
+	{
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+	}
 })
 
