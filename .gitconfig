@@ -1,0 +1,12 @@
+[user]
+	name = goverclock
+	mail = goverclock@outlook.com
+	email = goverclock@outlook.com
+[init]
+	defaultBranch = main
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[core]
+	excludesfile = /Users/goverclock/code/.gitignore
+[alias]
+	l = log --graph
