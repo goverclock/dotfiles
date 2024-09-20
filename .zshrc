@@ -2,17 +2,11 @@ PROMPT='%F{green}[%n@%m:%1~]%F{reset}%# '
 EDITOR=nvim
 LANGUAGE="en_US.UTF-8"
 
-# 
-
 # alias
 alias vim="nvim"
 alias ls="ls -F --color"
 alias codee="code .; exit"
 alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-# proxy
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=$http_proxy
 
 # vim mode for zsh
 set -o vi
@@ -91,5 +85,5 @@ export PATH=$PATH:$GOPATH/bin
 export GOPROXY=https://goproxy.cn
 
 # handy scripts
-export PATH=$PATH:$HOME/pyscripts
+export PATH=$PATH:$HOME/scripts
 
