@@ -26,8 +26,8 @@ require("lazy").setup({
 		'nvim-telescope/telescope.nvim',
 		cmd = "Telescope",
 		keys = {
-			{ "<C-p>", ":Telescope find_files<CR>" },
-			{ "<C-f>", ":Telescope live_grep<CR>" },
+			{ "<C-p>", ":Telescope find_files<CR>", silent = true },
+			{ "<C-f>", ":Telescope live_grep<CR>",  silent = true },
 		},
 		config = function()
 			require("plugins/telescope")
@@ -44,7 +44,7 @@ require("lazy").setup({
 			"nvim-tree/nvim-web-devicons",
 		},
 		keys = {
-			{ "<Leader>e", ":NvimTreeToggle<CR>", mode = "n" }
+			{ "<Leader>e", ":NvimTreeToggle<CR>", mode = "n", silent = true }
 		}
 	},
 	{
@@ -62,9 +62,17 @@ require("lazy").setup({
 		version = '^1.0.0', -- optional: only update when a new 1.x version is released
 	},
 	{
+		"petertriho/nvim-scrollbar",
+		lazy = false, -- TODO: possible to make this lazy?
+	},
+	{
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	}
 })
 
+require("plugins.theme")
+require("plugins.nvim-tree")
+require("plugins.lsp")
+require("scrollbar").setup()
