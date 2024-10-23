@@ -73,7 +73,7 @@ fi
 
 source "$ANTIGEN"
 antigen bundle zsh-users/zsh-syntax-highlighting
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=14"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=14"                # if not working, change to fg=6
 antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
 # antigen done
