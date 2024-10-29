@@ -8,17 +8,7 @@ alias ls="ls -F --color"
 alias codee="code .; exit"
 alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# vim mode for zsh
-set -o vi
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
-# escape time for zsh vim mode, see https://www.johnhawthorn.com/2012/09/vi-escape-delays/
-KEYTIMEOUT=1
+bindkey -e
 
 # history
 HISTFILE=~/.zsh_history
