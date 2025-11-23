@@ -40,39 +40,23 @@ require("lazy").setup({
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
 		lazy = false,
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
 		keys = {
 			{ "<Leader>e", ":NvimTreeToggle<CR>", mode = "n", silent = true }
 		}
 	},
 	{
 		'romgrk/barbar.nvim',
-		dependencies = {
-			-- 'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-			'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-		},
 		init = function() vim.g.barbar_auto_setup = false end,
-		opts = {
-			-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-			animation = false,
-			auto_hide = true,
-		},
 		version = '^1.0.0', -- optional: only update when a new 1.x version is released
 	},
 	{
 		"petertriho/nvim-scrollbar",
-		lazy = false, -- TODO: possible to make this lazy?
+		lazy = false,
 	},
-	{
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
-	}
 })
 
 require("plugins.theme")
 require("plugins.nvim-tree")
-require("plugins.lsp")
+require("plugins.barbar")
 require("scrollbar").setup()
+

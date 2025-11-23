@@ -13,6 +13,7 @@ vkm.set("n", "<C-n>", ":noh<CR>", opt)
 vkm.set("n", "<Leader>v", "<C-w>v", opt)
 vkm.set("n", "<Leader>s", "<C-w>s", opt)
 vkm.set("n", "<Leader>sv", ":source ~/.config/nvim/init.lua<CR>", opt)
+vkm.set('n', 'gd', '<C-]>', opt)
 
 -- buffer manager
 vkm.set('n', 'J', ':BufferNext<CR>', opt)
