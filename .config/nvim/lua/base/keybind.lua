@@ -30,3 +30,10 @@ vkm.set("i", "<C-l>", "<Right>", opt)
 vkm.set("t", "<Esc>", "<C-\\><C-n>", opt)
 vkm.set("n", "<C-t>", ":tab term<CR>", opt)
 
+-- format
+vkm.set('n', '<leader>f', function()
+  local save_cursor = vim.fn.getpos('.')
+  vim.cmd('%!clang-format')
+  vim.fn.setpos('.', save_cursor)
+end, opt)
+

@@ -68,6 +68,10 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
 # antigen done
 
+if [ -z "$TMUX" ]; then
+	tmux a || tmux
+fi
+
 # GO
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
