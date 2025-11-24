@@ -64,7 +64,6 @@ require("nvim-tree").setup {
 		custom = {
 			".git",
 			".vscode",
-			"__pycache__",
 		},
 	},
 }

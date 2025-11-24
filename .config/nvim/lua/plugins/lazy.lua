@@ -49,14 +49,9 @@ require("lazy").setup({
 		init = function() vim.g.barbar_auto_setup = false end,
 		version = '^1.0.0', -- optional: only update when a new 1.x version is released
 	},
-	{
-		"petertriho/nvim-scrollbar",
-		lazy = false,
-	},
 })
 
 require("plugins.theme")
 require("plugins.nvim-tree")
 require("plugins.barbar")
-require("scrollbar").setup()
 

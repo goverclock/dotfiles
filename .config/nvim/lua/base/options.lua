@@ -3,7 +3,7 @@ local set = vim.o
 set.colorcolumn = "81"
 set.number = true
 set.relativenumber = true
-set.clipboard = "unnamed"
+set.clipboard = 'unnamedplus,unnamed'
 set.confirm = true
 
 set.ignorecase = true
