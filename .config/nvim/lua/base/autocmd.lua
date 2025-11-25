@@ -19,3 +19,18 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 	pattern = "*.log",
 	command = ":set norelativenumber",
 })
+
+-- auto session resore
+vim.api.nvim_create_autocmd('VimEnter', {
+	pattern = '*',
+	callback =
+		function()
+			local session_file = vim.fn.getcwd() .. '/Session.vim'
+			if vim.fn.filereadable(session_file) == 1 then
+				vim.cmd('source ' .. session_file)
+				print('Session restored from: ' .. session_file)
+			end
+		end,
+	nested = true,
+})
+

@@ -26,6 +26,9 @@ vkm.set("i", "<C-j>", "<Down>", opt)
 vkm.set("i", "<C-k>", "<Up>", opt)
 vkm.set("i", "<C-l>", "<Right>", opt)
 
+-- search vim clipboard
+vkm.set('n', '/<C-r>', '/<C-r>"<CR>', opt)
+
 -- terminal
 vkm.set("t", "<Esc>", "<C-\\><C-n>", opt)
 vkm.set("n", "<C-t>", ":tab term<CR>", opt)

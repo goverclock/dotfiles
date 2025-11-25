@@ -7,6 +7,6 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [core]
-	excludesfile = /Users/goverclock/code/.gitignore
+	excludesfile = ~/code/.gitignore
 [alias]
 	l = log --graph
