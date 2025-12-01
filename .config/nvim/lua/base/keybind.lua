@@ -12,7 +12,6 @@ vkm.set("n", "<C-l>", "<C-w>l", opt)
 vkm.set("n", "<C-n>", ":noh<CR>", opt)
 vkm.set("n", "<Leader>v", "<C-w>v", opt)
 vkm.set("n", "<Leader>s", "<C-w>s", opt)
-vkm.set("n", "<Leader>sv", ":source ~/.config/nvim/init.lua<CR>", opt)
 vkm.set('n', 'gd', '<C-]>', opt)
 
 -- buffer manager
@@ -20,11 +19,8 @@ vkm.set('n', 'J', ':BufferNext<CR>', opt)
 vkm.set('n', 'K', ':BufferPrevious<CR>', opt)
 vkm.set('n', 'Q', ':bp<bar>sp<bar>bn<bar>bd<CR>', opt)	-- see https://stackoverflow.com/questions/1444322/how-can-i-close-a-buffer-without-closing-the-window
 
--- move cursor in insert mode
-vkm.set("i", "<C-h>", "<Left>", opt)
-vkm.set("i", "<C-j>", "<Down>", opt)
-vkm.set("i", "<C-k>", "<Up>", opt)
-vkm.set("i", "<C-l>", "<Right>", opt)
+-- save session
+vkm.set('n', '<C-s>', ':NvimTreeClose<CR>:mksession!<CR>', { noremap = true })
 
 -- search vim clipboard
 vkm.set('n', '/<C-r>', '/<C-r>"<CR>', opt)

@@ -41,7 +41,9 @@ end
 require("nvim-tree").setup {
 	on_attach = my_on_attach,
 	view = {
-		width = 30,
+		width = {
+			min = 30,
+		}
 	},
 	renderer = {
 		icons = {
@@ -59,7 +61,6 @@ require("nvim-tree").setup {
 	},
 	filters = {
 		enable = true,
-		git_ignored = false,
 		git_clean = false,
 		custom = {
 			".git",

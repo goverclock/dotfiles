@@ -39,7 +39,7 @@ require("lazy").setup({
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
-		lazy = false,
+		lazy = true,
 		keys = {
 			{ "<Leader>e", ":NvimTreeToggle<CR>", mode = "n", silent = true }
 		}

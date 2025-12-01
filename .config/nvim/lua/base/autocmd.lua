@@ -20,6 +20,17 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 	command = ":set norelativenumber",
 })
 
+-- quickfix do not jump to
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "qf",
+  callback = function()
+    vim.api.nvim_buf_set_keymap(0, "n", "<CR>", "<CR>:copen<CR>", {
+      noremap = true,
+      silent = false,
+    })
+  end
+})
+
 -- auto session resore
 vim.api.nvim_create_autocmd('VimEnter', {
 	pattern = '*',
