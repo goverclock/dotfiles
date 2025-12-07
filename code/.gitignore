@@ -2,4 +2,5 @@ tags
 Session.vim
 .VSCode*
 .vscode
+.DS_Store
 

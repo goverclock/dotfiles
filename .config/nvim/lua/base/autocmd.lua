@@ -24,9 +24,10 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "qf",
   callback = function()
-    vim.api.nvim_buf_set_keymap(0, "n", "<CR>", "<CR>:copen<CR>", {
+    vim.api.nvim_buf_set_keymap(0, "n", "<Leader>", "<CR>:copen<CR>", {
       noremap = true,
       silent = false,
+	  nowait = true,
     })
   end
 })
