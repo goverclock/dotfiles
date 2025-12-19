@@ -8,6 +8,15 @@ require('telescope').setup {
 		file_ignore_patterns = {
 			"Session.vim",
 			"tags"
-		}
+		},
+		mappings = {
+			n = {
+				["p"] = function()
+					local clipboard_content = vim.fn.getreg('+')
+					local prompt = vim.fn.getline('.')
+					vim.fn.setline('.', prompt .. clipboard_content)
+				end,
+			},
+		},
 	},
 }
